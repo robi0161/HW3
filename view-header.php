@@ -20,13 +20,13 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="artist.php">Artist</a>
+          <a class="nav-link" href="artists.php">Artists</a>
         </li>
            <li class="nav-item">
           <a class="nav-link" href="genres.php">Genres</a>
         </li>
            <li class="nav-item">
-          <a class="nav-link" href="artist-with-courses.php">Artist with Genres</a>
+          <a class="nav-link" href="artists-with-courses.php">Artists with Genres</a>
            </li>
          </ul>
        </div>
