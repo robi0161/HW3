@@ -1,9 +1,10 @@
 <?php
 require_once("util-db.php");
-require_once("model-artist.php");
+require_once("model-artists.php");
 
 $pageTitle = "Artists";
 include "view-header.php";
-$Artist = selectAtrist()
+$Artists = selectAtrists();
+include "view-artists.php";
 include "view-footer.php";
 ?>
