@@ -4,7 +4,7 @@ require_once("model-genres.php");
 
 $pageTitle = "Genres";
 include "view-header.php";
-$genres = selectGenres();
+$Genres = selectGenres();
 include "view-genres.php";
 include "view-genres.php";
 ?>
