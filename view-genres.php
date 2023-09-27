@@ -13,9 +13,9 @@
   while ($genre =$Genres->fetch_assoc()) {
    ?>
     <tr>
-      <td><?php echo $genres['genre_id']; ?></td>
-      <td><?php echo $genres['genre_name']; ?></td>
-      <td><?php echo $genres['genre_description']; ?></td>
+      <td><?php echo $genre['genre_id']; ?></td>
+      <td><?php echo $genre['genre_name']; ?></td>
+      <td><?php echo $genre['genre_description']; ?></td>
     </tr>
   <?php
   }
