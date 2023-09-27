@@ -2,7 +2,7 @@
 function selectGenres() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT genre_id, genre_name, genre_description  FROM `genre`");
+        $stmt = $conn->prepare("SELECT genre_id, genre_name, genre_description FROM `genre`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
