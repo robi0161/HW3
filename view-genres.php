@@ -10,7 +10,7 @@
     </thead>
     <tbody>
  <?php
-  while ($artist = $Artists->fetch_assoc()) {
+  while ($genre =$Genres->fetch_assoc()) {
    ?>
     <tr>
       <td><?php echo $genres['genre_id']; ?></td>
