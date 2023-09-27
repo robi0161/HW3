@@ -1,5 +1,5 @@
 <?php
-function selectArtists() {
+function selectGenres() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT genre_id, genre_name, genre_description  FROM `artist`");
