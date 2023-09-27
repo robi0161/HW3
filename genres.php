@@ -6,5 +6,4 @@ $pageTitle = "Genres";
 include "view-header.php";
 $Genres = selectGenres();
 include "view-genres.php";
-include "view-genres.php";
 ?>
