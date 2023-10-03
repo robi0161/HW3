@@ -2,9 +2,9 @@
 require_once("util-db.php");
 require_once("model-Genres-with-Artists.php");
 
-$pageTitle = "Artists-with-Genres";
+$pageTitle = "Genres-with-Artists";
 include "view-header.php";
-$Genres = selectGenres();
-include "view-genres.php";
+$Genres = selectGenresWithArtists($_GET['id']);
+include "view-genres-with-artists.php";
 include "view-footer.php";
 ?>
