@@ -19,7 +19,7 @@
       <td><?php echo $genre['genre_description']; ?></td>
       <td>
         <form method="post" action="songs-by-genre.php">
-          <imput type="hidden" name="sid" value="<?php echo $genre['genre_id']; ?>">
+          <imput type="hidden" name="gid" value="<?php echo $genre['genre_id']; ?>">
         <button type="submit" class="btn btn-primary">Songs</button>
       </form>
       </td>
