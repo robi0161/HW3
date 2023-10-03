@@ -17,7 +17,7 @@
       <td><?php echo $artist['artist_id']; ?></td>
       <td><?php echo $artist['artist_name']; ?></td>
       <td><?php echo $artist['hometown']; ?></td>
-      <td><a href="Artists-with-Genres.php?id=<?php echo $artist['artist_id']; ?>">Discography</a></td>
+      <td><a href="Genres-with-Artists.php?id=<?php echo $artist['artist_id']; ?>">Discography</a></td>
     </tr>
   <?php
   }
