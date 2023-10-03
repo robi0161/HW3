@@ -6,6 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Hometown</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
       <td><?php echo $artist['artist_id']; ?></td>
       <td><?php echo $artist['artist_name']; ?></td>
       <td><?php echo $artist['hometown']; ?></td>
+      <td><a href="Artists-with-Genres.php?id=<?php echo $artist['artist_id']; ?>">Discography</a></td>
     </tr>
   <?php
   }
