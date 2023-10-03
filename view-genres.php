@@ -6,6 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Description</th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,12 @@
       <td><?php echo $genre['genre_id']; ?></td>
       <td><?php echo $genre['genre_name']; ?></td>
       <td><?php echo $genre['genre_description']; ?></td>
+      <td>
+        <form method="post" action="songs-by-genre.php">
+          <imput type="hidden" name="sid" value="<?php echo $genre['genre_id']; ?>">
+        <button type="submit" class="btn btn-primary">Songs</button>
+      </form>
+      </td>
     </tr>
   <?php
   }
