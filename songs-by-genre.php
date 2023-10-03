@@ -1,6 +1,6 @@
 <?php
 require_once("util-db.php");
-require_once("model-songs-by-genres.php");
+require_once("model-songs-by-genre.php");
 
 $pageTitle = "Songs by Genre";
 include "view-header.php";
