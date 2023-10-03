@@ -13,15 +13,15 @@
     </thead>
     <tbody>
  <?php
-  while ($songs =$Songs->fetch_assoc()) {
+  while ($song =$songs->fetch_assoc()) {
    ?>
     <tr>
-      <td><?php echo $songs['genre_id']; ?></td>
-      <td><?php echo $songs['genre_name']; ?></td>
-      <td><?php echo $songs['genre_description']; ?></td>
-      <td><?php echo $songs['title']; ?></td>
-      <td><?php echo $songs['producer']; ?></td>
-      <td><?php echo $songs['language']; ?></td>
+      <td><?php echo $song['genre_id']; ?></td>
+      <td><?php echo $song['genre_name']; ?></td>
+      <td><?php echo $song['genre_description']; ?></td>
+      <td><?php echo $song['title']; ?></td>
+      <td><?php echo $song['producer']; ?></td>
+      <td><?php echo $song['language']; ?></td>
     </tr>
   <?php
   }
