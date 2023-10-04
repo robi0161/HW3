@@ -4,7 +4,7 @@ require_once("model-songs-by-genre.php");
 
 $pageTitle = "Songs by Genre";
 include "view-header.php";
-$Songs = selectSongsByGenre($_POST['gid']);
+$songs = selectSongsByGenre($_POST['gid']);
 include "view-songs-by-genre.php";
 include "view-footer.php";
 ?>
