@@ -1,7 +1,7 @@
 <h1>Artists with Genres</h1>
 <div class="card-group">
  <?php
-  while ($artist = $Artists->fetch_assoc()) {
+ while ($artist = $Artists->fetch_assoc()) {
    ?>
       <div class="card">
     <div class="card-body">
