@@ -12,7 +12,7 @@
 $Genres = selectGenresWithArtists($artist['artist_id']);
    while ($genre =  $Genres->fetch_assoc()) {
    ?>
-      <li class="list-group-item"><?php echo $song['genre_name']; ?> - <?php echo $song['title']; ?> - <?php echo $song['producer']; ?> - <?php echo $song['language']; ?></li>
+      <li class="list-group-item"><?php echo $genre['genre_name']; ?> - <?php echo $genre['title']; ?> - <?php echo $genre['producer']; ?> - <?php echo $genre['language']; ?></li>
        <?php
    }
 ?>
