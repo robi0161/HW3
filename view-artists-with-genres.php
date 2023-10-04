@@ -10,7 +10,7 @@
       <ul class="list-group">
 <?php
   $Genress = selectGenresWithArtists($artist['artist_id']);
-   while ($Genree =  $Genress->fetch_assoc()) {
+   while ($Genre =  $Genres->fetch_assoc()) {
    ?>
       <li class="list-group-item"><?php echo $song['genre_name']; ?> - <?php echo $song['title']; ?> - <?php echo $song['producer']; ?> - <?php echo $song['language']; ?></li>
     <?php
