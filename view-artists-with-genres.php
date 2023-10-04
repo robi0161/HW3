@@ -13,7 +13,8 @@
    while ($Genre =  $Genres->fetch_assoc()) {
    ?>
       <li class="list-group-item"><?php echo $song['genre_name']; ?> - <?php echo $song['title']; ?> - <?php echo $song['producer']; ?> - <?php echo $song['language']; ?></li>
-    <?php
+ 
+       <?php
    }
 ?>
      </ul>
