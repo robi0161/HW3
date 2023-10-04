@@ -26,7 +26,7 @@
           <a class="nav-link" href="genres.php">Genres</a>
         </li>
            <li class="nav-item">
-          <a class="nav-link" href="artists-with-courses.php">Artists with Genres</a>
+          <a class="nav-link" href="artists-with-genres.php">Artists with Genres</a>
            </li>
          </ul>
        </div>
