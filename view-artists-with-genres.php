@@ -7,13 +7,16 @@
     <div class="card-body">
       <h5 class="card-title"><?php echo $artist['artist_name']; ?></h5>
       <p class="card-text">
+      <ul class="list-group">
 <?php
   $Genress = selectGenresWithArtists($artist['artist_id']);
    while ($Genree =  $Genress->fetch_assoc()) {
    ?>
+      <li class="list-group-item"><?php echo $song['genre_name']; ?> - <?php echo $song['title']; ?> - <?php echo $song['producer']; ?> - <?php echo $song['language']; ?></li>
     <?php
    }
 ?>
+     </ul>
       </p>
       <p class="card-text"><small class="text-body-secondary">HomeTown: <?php echo $artist['hometown']; ?></small></p>
     </div>
