@@ -3,7 +3,7 @@
 <h1>Genres</h1>
   </div>
   <div class="col-auto">
-  <?php>
+  <?php
    include "view-genres-newform.php";
   ?>
   </div>
