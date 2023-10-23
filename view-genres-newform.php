@@ -20,7 +20,7 @@
               <label for="gName" class="form-label">Genre Name</label>
               <input type="text" class="form-control" id="gName" name="gName">
             </div>
-        <div class="mb-3">
+            <div class="mb-3">
               <label for="gDesc" class="form-label">Genre Description</label>
               <input type="text" class="form-control" id="gDesc" name="gDesc">
             </div>
