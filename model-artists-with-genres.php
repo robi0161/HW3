@@ -27,11 +27,11 @@ function selectGenresWithArtists($aid) {
         throw $e;
     }
 }
-function insertGenresWithArtists($aid, $gDesc) {
+function insertSong($aid, $gid, $title, $language, $producer) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSER INTO `genre` g join song s on s.genre_id = g.genre_id where s.artist_id=?");
-       $stmt->bind_param("sss=", $aName, $gDesc);
+        $stmt = $conn->prepare("INSERT INTO `song` (`artist_id`, `genre_id`, `title`, `language`, `producer`) VALUES (? , ? , ? , ?, ?);");
+       $stmt->bind_param("iisss=", $aid, $gid, $title, $language, $producer);
         $stmt->execute();
         $success = $stmt->get_result();
         $conn->close();
