@@ -31,7 +31,7 @@ function insertSong($aid, $gid, $title, $language, $producer) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `song` (`artist_id`, `genre_id`, `title`, `language`, `producer`) VALUES (? , ? , ? , ?, ?);");
-       $stmt->bind_param("iisss=", $aid, $gid, $title, $language, $producer);
+       $stmt->bind_param("iisss", $aid, $gid, $title, $language, $producer);
         $stmt->execute();
         $success = $stmt->get_result();
         $conn->close();
