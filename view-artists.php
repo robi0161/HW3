@@ -29,6 +29,9 @@
       <td><?php echo $artist['artist_name']; ?></td>
       <td><?php echo $artist['hometown']; ?></td>
      <td>
+       <?php
+   include "view-artists-editform.php";
+  ?>
      </td>
      <td>
     <form method="post" action="">
