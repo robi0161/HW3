@@ -27,15 +27,15 @@ function selectGenresWithArtists($aid) {
         throw $e;
     }
 }
-function insertGenresWithArtists($aid) {
+function insertGenresWithArtists($aid, $gDesc) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT g.genre_id, genre_name, genre_description, title, producer, language FROM `genre` g join song s on s.genre_id = g.genre_id where s.artist_id=?");
-       $stmt->bind_param("i", $aid);
+        $stmt = $conn->prepare("INSER INTO `genre` g join song s on s.genre_id = g.genre_id where s.artist_id=?");
+       $stmt->bind_param("sss=", $aName, $gDesc);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $success = $stmt->get_result();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
