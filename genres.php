@@ -9,9 +9,9 @@ if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']){
     case "Add":
       if(insertGenre($_POST['gName'], $_POST['gDesc'])) {
-        echo '<div class="alert alert-success" role="alert">Genre Added</div>"';
+        echo '<div class="alert alert-success" role="alert">Genre Added</div>';
       } else{
-         echo '<div class="alert alert-danger" role="alert">Error</div>"';
+         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
   }
