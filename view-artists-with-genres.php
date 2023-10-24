@@ -17,11 +17,19 @@
       <h5 class="card-title"><?php echo $artist['artist_name']; ?></h5>
       <p class="card-text">
       <ul class="list-group">
+      <th></th>
+      <th></th>
 <?php
 $Genres = selectGenresWithArtists($artist['artist_id']);
    while ($genre =  $Genres->fetch_assoc()) {
    ?>
       <li class="list-group-item"><?php echo $genre['genre_name']; ?> - <?php echo $genre['title']; ?> - <?php echo $genre['producer']; ?> - <?php echo $genre['language']; ?></li>
+       <td>
+        
+       </td>
+       <td>
+        
+       </td>
        <?php
    }
 ?>
