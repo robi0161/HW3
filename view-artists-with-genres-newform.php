@@ -22,12 +22,20 @@
              <input type="text" class="form-control" id="aid" name="aid">
            </div>
            <div class="mb-3">
-             <label for="gDesc" class="form-label">Genre Description</label>
+             <label for="gDesc" class="form-label">Genre</label>
              <input type="text" class="form-control" id="gid" name="gid">
            </div>
            <div class="mb-3">
-             <label for="gDesc" class="form-label">Hometown</label>
-             <input type="text" class="form-control" id="gid" name="gid">
+             <label for="gDesc" class="form-label">Title</label>
+             <input type="text" class="form-control" id="title" name="title">
+           </div>
+            <div class="mb-3">
+             <label for="gDesc" class="form-label">Language</label>
+             <input type="text" class="form-control" id="language" name="language">
+           </div>
+            <div class="mb-3">
+             <label for="gDesc" class="form-label">Producer</label>
+             <input type="text" class="form-control" id="producer" name="producer">
            </div>
            <input type="hidden" name="actionType" value="Add">
            <button type="submit" class="btn btn-primary">Save</button>
