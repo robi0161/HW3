@@ -32,7 +32,6 @@ function insertSong($aid, $gid, $title, $language, $producer) {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `song` (`artist_id`, `genre_id`, `title`, `language`, `producer`) VALUES (? , ? , ? , ?, ?);");
        $stmt->bind_param("iisss", $aid, $gid, $title, $language, $producer);
-        $stmt->execute();
         $success = $stmt->get_result();
         $conn->close();
         return $success;
@@ -46,7 +45,6 @@ function updateSong($aid, $gid, $title, $language, $producer, $sid ) {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `song` set `artist_id`= ?, `genre_id`= ?, `title`= ?, `language`= ?, `producer`= ?) where song_id= ?");
        $stmt->bind_param("iisssi", $aid, $gid, $title, $language, $producer, $sid);
-        $stmt->execute();
         $success = $stmt->get_result();
         $conn->close();
         return $success;
@@ -60,7 +58,6 @@ function deleteSong($sid) {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from song where song_id=?");
        $stmt->bind_param("i", $sid);
-        $stmt->execute();
         $success = $stmt->get_result();
         $conn->close();
         return $success;
