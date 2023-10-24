@@ -15,14 +15,14 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Edit":
-      if(updateGenre($_POST['aName'], $_POST['aHome'], $_POST['aid'])) {
+      if(updateArtists($_POST['aName'], $_POST['aHome'], $_POST['aid'])) {
         echo '<div class="alert alert-success" role="alert">Artist Edited</div>';
       } else{
          echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
        case "Delete":
-      if(deleteGenre($_POST['aid'])) {
+      if(deleteArtists($_POST['aid'])) {
         echo '<div class="alert alert-success" role="alert">Artist Deleted</div>';
       } else{
          echo '<div class="alert alert-danger" role="alert">Error</div>';
