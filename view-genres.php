@@ -29,6 +29,9 @@
       <td><?php echo $genre['genre_name']; ?></td>
       <td><?php echo $genre['genre_description']; ?></td>
      <td>
+  <?php
+   include "view-genres-editform.php";
+  ?>
      </td>
      <td>
        <form method="post" action="">
