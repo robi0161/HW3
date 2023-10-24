@@ -41,29 +41,29 @@ function insertSong($aid, $gid, $title, $language, $producer) {
         throw $e;
     }
 }
-function selectGenresWithArtists($aid) {
+function updateSong($aid, $gid, $title, $language, $producer, $sid ) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT g.genre_id, genre_name, genre_description, title, producer, language FROM `genre` g join song s on s.genre_id = g.genre_id where s.artist_id=?");
-       $stmt->bind_param("i", $aid);
+        $stmt = $conn->prepare("update `song` set `artist_id`= ?, `genre_id`= ?, `title`= ?, `language`= ?, `producer`= ?) where song_id= ?");
+       $stmt->bind_param("iisssi", $aid, $gid, $title, $language, $producer, $sid);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $success = $stmt->get_result();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
     }
 }
-function selectGenresWithArtists($aid) {
+function deleteSong($sid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT g.genre_id, genre_name, genre_description, title, producer, language FROM `genre` g join song s on s.genre_id = g.genre_id where s.artist_id=?");
-       $stmt->bind_param("i", $aid);
+        $stmt = $conn->prepare("delete from song where song_id=?");
+       $stmt->bind_param("i", $sid);
         $stmt->execute();
-        $result = $stmt->get_result();
+        $success = $stmt->get_result();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
