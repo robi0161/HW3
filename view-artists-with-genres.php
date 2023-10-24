@@ -1,4 +1,9 @@
+<div class="row">
+ <div class="col">
 <h1>Artists with Genres</h1>
+ </div>
+ <div class= "col-auto">
+  
 <div class="card-group">
  <?php
  while ($artist = $Artists->fetch_assoc()) {
