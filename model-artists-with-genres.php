@@ -57,7 +57,7 @@ function deleteSong($sid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from song where song_id=?");
-       $stmt->bind_param("i", $sid);
+        $stmt->bind_param("i", $sid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
