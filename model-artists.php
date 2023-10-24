@@ -29,7 +29,7 @@ function insertArtists($aName, $aHome) {
 function updateArtists($aName, $aHome, $aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `artist` set `artist_name` = ?, `hometown` = ?) where artist_id = ?");
+        $stmt = $conn->prepare("update `artist` set `artist_name` = ?, `hometown` = ? where artist_id = ?");
          $stmt->bind_param("ssi", $aName, $aHome, $aid);
         $success = $stmt->execute();
         $conn->close();
