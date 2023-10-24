@@ -37,7 +37,9 @@ $Genres = selectGenresWithArtists($artist['artist_id']);
       </form>
      </td>
        <td>
-        
+  <?php
+   include "view-artists-with-genres-editform.php";
+  ?>
        </td>
        <?php
    }
