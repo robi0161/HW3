@@ -1,4 +1,11 @@
-<h1> Best Selling Albums of All Time</h1>
+<div class="row">
+  <div class="col">
+    <h1> Best Selling Albums of All Time</h1>
+    </div>
+    <div class ="col-auto">
+      
+  </div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
