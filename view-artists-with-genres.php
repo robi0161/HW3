@@ -24,7 +24,12 @@ $Genres = selectGenresWithArtists($artist['artist_id']);
    while ($genre =  $Genres->fetch_assoc()) {
    ?>
       <li class="list-group-item"><?php echo $genre['genre_name']; ?> - <?php echo $genre['title']; ?> - <?php echo $genre['producer']; ?> - <?php echo $genre['language']; ?></li>
-        <td>
+     <td>
+  <?php
+   include "view-artists-with-genres-editform.php";
+  ?>
+       </td> 
+       <td>
        <form method="post" action="">
            <input type="hidden" name="aid" value="<?php echo $artist['artist_id']; ?>">
           <input type="hidden" name="actionType" value="Delete">
@@ -36,11 +41,6 @@ $Genres = selectGenresWithArtists($artist['artist_id']);
           </button>
       </form>
      </td>
-       <td>
-  <?php
-   include "view-artists-with-genres-editform.php";
-  ?>
-       </td>
        <?php
    }
 ?>
