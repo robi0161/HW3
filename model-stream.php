@@ -2,7 +2,7 @@
 function selectStream() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT album_id, album_name, release_year FROM `album`");
+        $stmt = $conn->prepare("SELECT stream_id, stream_name, stream_year FROM `stream`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -12,11 +12,11 @@ function selectStream() {
         throw $e;
     }
 }
-function insertAlbum($alName, $alYear) {
+function insertStream($stName, $stYear) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `album` ( `album_name`, `release_year`) VALUES (? , ?)");
-        $stmt->bind_param("ss", $alName, $alYear);
+        $stmt = $conn->prepare("INSERT INTO `stream` ( `stream_name`, `stream_year`) VALUES (? , ?)");
+        $stmt->bind_param("ss", $stName, $stYear);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -25,11 +25,11 @@ function insertAlbum($alName, $alYear) {
         throw $e;
     }
 }
-function updateAlbum($alName, $alYear, $alid) {
+function updateAlbum($stName, $stYear, $stid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `album` set `album_name` = ?, `release_year` = ? where album_id=? ");
-        $stmt->bind_param("ssi", $alName, $alYear, $alid);
+        $stmt = $conn->prepare("update `stream` set `stream_name` = ?, `stream_year` = ? where stream_id=? ");
+        $stmt->bind_param("ssi", $stName, $stYear, $stid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -38,11 +38,11 @@ function updateAlbum($alName, $alYear, $alid) {
         throw $e;
     }
 }
-function deleteAlbum($alid) {
+function deleteAlbum($stid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from album where album_id=?");
-        $stmt->bind_param("i", $alid);
+        $stmt = $conn->prepare("delete from stream where stream_id=?");
+        $stmt->bind_param("i", $stid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
