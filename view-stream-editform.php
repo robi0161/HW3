@@ -22,7 +22,7 @@
            </div>
             <div class="mb-3">
              <label for="stYear<?php echo $streams['stream_id']; ?>" class="form-label">Streaming Service Release Year</label>
-             <input type="text" class="form-control" id="stYear<?php echo $streams['stream_id']; ?>" name="stYear" value ="<?php echo $streams['stream_id']; ?>">
+             <input type="text" class="form-control" id="stYear<?php echo $streams['stream_id']; ?>" name="stYear" value ="<?php echo $streams['stream_year']; ?>">
            </div>
            <input type="hidden" name="stid" value ="<?php echo $streams['stream_id']; ?>">
            <input type="hidden" name="actionType" value="Edit">
