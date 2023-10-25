@@ -1,9 +1,10 @@
 <?php
-require_once("
+require_once("util-db.php");
+require_once("model-album.php");
+
 $pageTitle = "Album";
 include "view-header.php";
-?>
-
-<?php
+$album = selectAlbum();
+include "view-album.php";
 include "view-footer.php";
 ?>
