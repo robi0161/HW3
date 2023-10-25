@@ -25,7 +25,7 @@ function insertStream($stName, $stYear) {
         throw $e;
     }
 }
-function updateAlbum($stName, $stYear, $stid) {
+function updateStream($stName, $stYear, $stid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `stream` set `stream_name` = ?, `stream_year` = ? where stream_id=? ");
@@ -38,7 +38,7 @@ function updateAlbum($stName, $stYear, $stid) {
         throw $e;
     }
 }
-function deleteAlbum($stid) {
+function deleteStream($stid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from stream where stream_id=?");
