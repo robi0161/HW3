@@ -1,4 +1,4 @@
-<h1> Top 5 Albums </h1>
+<h1> Best Selling Albums of All Time</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
