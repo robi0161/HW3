@@ -27,6 +27,35 @@ function selectGenresWithArtists($aid) {
         throw $e;
     }
 }
+
+function selectArtistsforInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT artist_id, artist_name FROM `artist` order by artist_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectGenresforInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT genre_id, genre_name FROM `genre` order by genre_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function insertSong($aid, $gid, $title, $language, $producer) {
     try {
         $conn = get_db_connection();
