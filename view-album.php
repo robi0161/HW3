@@ -15,6 +15,9 @@
       <th>ID</th>
       <th>Name</th>
       <th>Release Year</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +28,12 @@ while ($albums = $album->fetch_assoc()) {
      <td><?php echo $albums['album_id']; ?></td>
      <td><?php echo $albums['album_name']; ?></td>
      <td><?php echo $albums['release_year']; ?></td>
+     <td>
+       
+     </td>
+     <td>
+       
+     </td>
    </tr>
   <?php
 }
