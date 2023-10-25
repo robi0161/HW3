@@ -18,7 +18,7 @@ if (isset($_POST['actionType'])){
       if (deleteAlbum($_POST['alid'])){
            echo '<div class="alert alert-success" role="alert">Album Deleted</div>';
       }else{
-        '<div class="alert alert-danger" role="alert">Error</div>';
+          echo '<div class="alert alert-danger" role="alert">Error</div>';
       }    
       break;
   }
