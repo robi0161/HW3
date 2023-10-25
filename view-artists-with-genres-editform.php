@@ -21,7 +21,7 @@
              <input type="text" class="form-control" id="aid<?php echo $genre['artist_id']; ?>" name="aid" value = "<?php echo $genre['artist_id']; ?>">
            </div>
            <div class="mb-3">
-             <label for="gid<?php echo $songs['song_id']; ?>" class="form-label">Genre</label>
+             <label for="gid<?php echo $genre['song_id']; ?>" class="form-label">Genre</label>
              <input type="text" class="form-control" id="gid<?php echo $genre['song_id']; ?>" name="gid" value = "<?php echo $genre['genre_id']; ?>">
            </div>
              <div class="mb-3">
