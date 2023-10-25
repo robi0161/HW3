@@ -24,6 +24,7 @@
              <label for="alYear" class="form-label">Album Release Year</label>
              <input type="text" class="form-control" id="alYear" name="alYear">
            </div>
+           <input type="hidden" name="actionType" value="Add">
            <button type="submit" class="btn btn-primary">Submit</button>
          </form>
       </div>
