@@ -11,7 +11,7 @@ if (isset($_POST['actionType'])){
       if (insertAlbum($_POST['alName'], $_POST['alYear'])){
            echo '<div class="alert alert-success" role="alert">Album Added</div>';
       }else{
-        '<div class="alert alert-danger" role="alert">Error</div>';
+        echo '<div class="alert alert-danger" role="alert">Error</div>';
       }    
       break;
    case "Delete":
