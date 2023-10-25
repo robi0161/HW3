@@ -1,6 +1,9 @@
 <select class="form-select" id="aid" name="aid">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<?php
+while ($artistItem = $artistList->fetch_assoc()){
+?>
+   <option value="<?php echo $$artistItem['artist_id']; ?>"><?php echo $$artistItem['artist_name']; ?></option>
+<?php
+}
+?>
 </select>
