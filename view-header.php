@@ -28,6 +28,9 @@
          <li class="nav-item">
           <a class="nav-link" href="album.php">Album</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stream.php">Top Streaming Services</a>
+        </li>
            <li class="nav-item">
           <a class="nav-link" href="artists-with-genres.php">Artists with Genres</a>
            </li>
