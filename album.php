@@ -8,8 +8,8 @@ include "view-header.php";
 if (isset($_POST['actionType'])){
   switch ($_POST['actionType']){
     case "Add":
-      insertAlbum(
-      
+      insertAlbum($_POST['alName'], $_POST['alYear']);
+      break;
   }
 }
 
