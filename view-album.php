@@ -29,7 +29,9 @@ while ($albums = $album->fetch_assoc()) {
      <td><?php echo $albums['album_name']; ?></td>
      <td><?php echo $albums['release_year']; ?></td>
      <td>
-       
+        <?php
+ include "view-album-editform.php";
+?>
      </td>
      <td>
        <form method="post" action="">
