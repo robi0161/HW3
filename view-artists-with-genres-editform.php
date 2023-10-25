@@ -17,11 +17,11 @@
       <div class="modal-body">
         <form method="post" action="">
            <div class="mb-3">
-             <label for="aName<?php echo $artist['artist_id']; ?>" class="form-label">Artist Name</label>
+             <label for="aName<?php echo $artist['artist_id']; ?>" class="form-label">Artist</label>
              <input type="text" class="form-control" id="aName<?php echo $artist['artist_id']; ?>" name="aName" value = "<?php echo $artist['artist_name']; ?>">
            </div>
            <div class="mb-3">
-             <label for="aHome<?php echo $artist['artist_id']; ?>" class="form-label">Artist Hometown</label>
+             <label for="aHome<?php echo $genre['genre_id']; ?>" class="form-label">Genre</label>
              <input type="text" class="form-control" id="aHome<?php echo $artist['artist_id']; ?>" name="aHome" value = "<?php echo $artist['hometown']; ?>">
            </div>
            <input type="hidden" name="aid" value="<?php echo $artist['artist_id']; ?>">
