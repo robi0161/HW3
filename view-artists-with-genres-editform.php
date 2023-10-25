@@ -18,13 +18,25 @@
         <form method="post" action="">
            <div class="mb-3">
              <label for="aid<?php echo $artist['artist_id']; ?>" class="form-label">Artist</label>
-             <input type="text" class="form-control" id="aid<?php echo $artist['artist_id']; ?>" name="aid" value = "<?php echo $artist['artist_name']; ?>">
+             <input type="text" class="form-control" id="aid<?php echo $artist['artist_id']; ?>" name="aid" value = "<?php echo $song['artist_id']; ?>">
            </div>
            <div class="mb-3">
-             <label for="gid<?php echo $artist['artist_id']; ?>" class="form-label">Artist Hometown</label>
-             <input type="text" class="form-control" id="aHome<?php echo $artist['artist_id']; ?>" name="aHome" value = "<?php echo $artist['hometown']; ?>">
+             <label for="gid<?php echo $song['song_id']; ?>" class="form-label">Genre</label>
+             <input type="text" class="form-control" id="gid<?php echo $song['song_id']; ?>" name="gid" value = "<?php echo $song['genre_id']; ?>">
            </div>
-           <input type="hidden" name="aid" value="<?php echo $artist['artist_id']; ?>">
+             <div class="mb-3">
+             <label for="title<?php echo $song['song_id']; ?>" class="form-label">Title</label>
+             <input type="text" class="form-control" id="title<?php echo $song['song_id']; ?>" name="title" value = "<?php echo $song['title']; ?>">
+           </div>
+             <div class="mb-3">
+             <label for="language<?php echo $song['song_id']; ?>" class="form-label">Language</label>
+             <input type="text" class="form-control" id="language<?php echo $song['song_id']; ?>" name="language" value = "<?php echo $song['language']; ?>">
+           </div>
+             <div class="mb-3">
+             <label for="producer<?php echo $song['song_id']; ?>" class="form-label">Producer</label>
+             <input type="text" class="form-control" id="producer<?php echo $song['song_id']; ?>" name="producer" value = "<?php echo $song['producer']; ?>">
+           </div>
+           <input type="hidden" name="aid" value="<?php echo $song['song_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
            <button type="submit" class="btn btn-primary">Save</button>
           </form>
