@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-    <h1>Top Streaming Services</h1>
+    <h1>Top Streaming Services </h1>
     </div>
     <div class ="col-auto">
  <?php
@@ -14,6 +14,7 @@
       <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>Release Year</th>
         <th></th>
         <th></th>
         <th></th>
@@ -26,6 +27,7 @@ while ($streams = $stream->fetch_assoc()) {
    <tr>
      <td><?php echo $streams['stream_id']; ?></td>
      <td><?php echo $streams['stream_name']; ?></td>
+     <td><?php echo $streams['stream_year']; ?></td>
      <td>
         <?php
  include "view-stream-editform.php";
