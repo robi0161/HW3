@@ -19,7 +19,10 @@
         <form method="post" action="">
            <div class="mb-3">
              <label for="aid" class="form-label">Artist</label>
-             <input type="text" class="form-control" id="aid" name="aid">
+   <?php
+$artistList = selectArtistforInput();
+
+   ?>
            </div>
            <div class="mb-3">
              <label for="gid" class="form-label">Genre</label>
