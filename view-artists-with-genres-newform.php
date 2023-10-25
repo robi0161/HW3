@@ -20,8 +20,8 @@
            <div class="mb-3">
              <label for="aid" class="form-label">Artist</label>
    <?php
-$artistList = selectArtistforInput();
-
+$artistList = selectArtistsforInput();
+include "view-artist-input-list.php";
    ?>
            </div>
            <div class="mb-3">
