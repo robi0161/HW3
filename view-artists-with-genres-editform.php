@@ -11,14 +11,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editSongModal<?php echo $song['song_id']; ?>">Edit Artist</h1>
+        <h1 class="modal-title fs-5" id="editSongModal<?php echo $song['song_id']; ?>">Edit Song</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
            <div class="mb-3">
-             <label for="aid<?php echo $artist['artist_id']; ?>" class="form-label">Artist</label>
-             <input type="text" class="form-control" id="aid<?php echo $artist['artist_id']; ?>" name="aid" value = "<?php echo $song['artist_id']; ?>">
+             <label for="aid<?php echo $song['artist_id']; ?>" class="form-label">Artist</label>
+             <input type="text" class="form-control" id="aid<?php echo $song['artist_id']; ?>" name="aid" value = "<?php echo $song['artist_id']; ?>">
            </div>
            <div class="mb-3">
              <label for="gid<?php echo $song['song_id']; ?>" class="form-label">Genre</label>
@@ -36,7 +36,7 @@
              <label for="producer<?php echo $song['song_id']; ?>" class="form-label">Producer</label>
              <input type="text" class="form-control" id="producer<?php echo $song['song_id']; ?>" name="producer" value = "<?php echo $song['producer']; ?>">
            </div>
-           <input type="hidden" name="aid" value="<?php echo $song['song_id']; ?>">
+           <input type="hidden" name="sid" value="<?php echo $song['song_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
            <button type="submit" class="btn btn-primary">Save</button>
           </form>
